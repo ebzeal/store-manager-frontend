@@ -1,5 +1,5 @@
 {
-  "name": "neon-authorshaven-frontend",
+  "name": "ebzeal-store-manager-frontend",
   "version": "1.0.0",
   "description": "A Social platform for the creative at heart",
   "main": "index.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andela/neon-ah-frontend.git"
+    "url": "git+https://github.com/ebzeal/store-manager-frontend.git"
   },
-  "author": "Andela Simulations Programme",
+  "author": "Olusola Ajayi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andela/neon-ah-frontend/issues"
+    "url": "https://github.com/ebzeal/store-manager-frontend/issues"
   },
-  "homepage": "https://github.com/andela/neon-ah-frontend#readme",
+  "homepage": "https://github.com/ebzeal/store-manager-frontend#readme",
   "dependencies": {
     "@babel/runtime": "^7.3.1",
     "axios": "^0.18.0",

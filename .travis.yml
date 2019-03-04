@@ -11,7 +11,7 @@ cache:
 env:
   - global:
       - NODE_ENV = test
-      - CC_TEST_REPORTER_ID=92ba1769cf40191d6c2895e1ad98f843d3baeefbc80a3f86bb5351b9dfe8bc82
+      - CC_TEST_REPORTER_ID=4931dbbaebb6dfea35b91e836123d4351e975bf32fa7d645181270a833afc1f5
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
