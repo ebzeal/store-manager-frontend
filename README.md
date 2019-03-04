@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/ebzeal/store-manager-frontend.svg?branch=develop)](https://travis-ci.org/ebzeal/store-manager-frontend)
-[![Coverage Status](https://coveralls.io/repos/github/ebzeal/store-manager-frontend/badge.svg?branch=develop)](https://coveralls.io/github/ebzeal/store-manager-frontend?branch=develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5e912646cdabb379101e/maintainability)](https://codeclimate.com/github/ebzeal/store-manager-frontend/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5e912646cdabb379101e/test_coverage)](https://codeclimate.com/github/ebzeal/store-manager-frontend/test_coverage)
 
 # store-manager-Frontend
 

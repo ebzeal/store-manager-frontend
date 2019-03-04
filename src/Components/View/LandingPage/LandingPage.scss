@@ -1,0 +1,48 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(https://res.cloudinary.com/ebzeal/image/upload/v1551711192/Ebzeal%20Stores/shop-bg.jpg) no-repeat center center
+      fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+#landingPageContent {
+  margin-top: 15em;
+  background-color: transparent;
+}
+.ui.vertical.divider:before,
+.ui.vertical.divider:after {
+  border: none;
+  color: transparent;
+}
+#homeLogo {
+  padding: 5em;
+  margin-top: 7em;
+}
+
+#homeForm {
+  padding: 5em;
+}
+
+#homeFormDiv {
+  margin: 0px 2em;
+  padding: 5em 2em;
+  background: linear-gradient(rgba(161, 161, 161, 0.7), rgba(161, 161, 161, 0.7));
+}
+
+@media all and (max-width: 768px) {
+  #landingPageContent {
+    margin-top: 4em;
+  }
+
+  #homeForm {
+    padding: 0;
+  }
+  #homeFormDiv {
+    margin: 0px;
+    padding: 5em 2em;
+  }
+}
