@@ -14,12 +14,7 @@ describe('App Component', () => {
     component = setUp();
   });
   it('Should render component without errors', () => {
-    // console.log(component.debug());
     const wrapper = findByTestAttr(component, 'appComponent');
-    expect(wrapper.length).toBe(1);
-  });
-  it('Should render logo', () => {
-    const wrapper = findByTestAttr(component, 'logoImg');
     expect(wrapper.length).toBe(1);
   });
 });
