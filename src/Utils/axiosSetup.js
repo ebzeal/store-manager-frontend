@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const token = localStorage.getItem('userToken');
+
 export const apiInstance = axios.create({
   baseURL: 'https://v2-store-manager.herokuapp.com/api/v1'
 });
@@ -12,7 +14,7 @@ const makeRequest = (url, options = { method: 'GET' }) => {
     headers: {
       Accept: 'application/json',
       'Content-type': 'application/json',
-      Authorization: `Bearer ${localStorage.getItem('userToken')}`
+      Authorization: token
     }
   }).then(response => response.data);
 };
