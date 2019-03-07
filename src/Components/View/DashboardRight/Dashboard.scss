@@ -1,0 +1,9 @@
+.fa-2x {
+  margin: 1em 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .ui.stackable.cards {
+    margin: 0px 5em;
+  }
+}
