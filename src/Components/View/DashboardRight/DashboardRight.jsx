@@ -30,7 +30,7 @@ class DashboardRight extends Component {
       salesLoading
     } = this.props;
     return (
-      <Card.Group itemsPerRow={3} stackable>
+      <Card.Group stackable>
         <Card>
           {productsLoading ? (
             <PlaceholderFluid />

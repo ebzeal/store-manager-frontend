@@ -3,7 +3,18 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .ui.stackable.cards {
-    margin: 0px 5em;
+  // .ui.stackable.cards {
+  //   margin: 0px;
+  // }
+
+  .ui.cards {
+    width: 150%;
+    margin: 0 0 0 10%;
+    align-content: center;
   }
+
+  // .content,
+  // .ui.cards > .card > .content {
+  //   width: 100%;
+  // }
 }

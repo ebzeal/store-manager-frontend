@@ -2,11 +2,16 @@ import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import Header from '../../View/Header/Header';
 import DashboardRight from '../../View/DashboardRight/DashboardRight';
+import AdminHeader from '../../View/Header/AdminHeader/AdminHeader';
+import AdminHeaderReasponsive from '../../View/Header/AdminHeaderResponsive/AdminHeaderResponsive';
 
 const Dashboard = () => {
   return (
     <div>
-      <Header />
+      <Header>
+        <AdminHeader />
+        <AdminHeaderReasponsive />
+      </Header>
       <div className="ui" id="allPage">
         <section className="ui grid stackable container" id="dashboardSection">
           <Grid stackable textAlign="center">
