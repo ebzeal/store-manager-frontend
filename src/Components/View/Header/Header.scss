@@ -1,3 +1,18 @@
+.header {
+  background-color: $lightGrey;
+  padding: 10px 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+.header__item {
+  margin: 0 25px;
+}
+.logo {
+  width: 170px;
+}
+
 .ui.inverted.segment,
 .ui.primary.inverted.segment {
   border-radius: 0px;
