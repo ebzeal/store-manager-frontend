@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import PlaceholderFluid from '../Placeholder/Placeholder';
 import * as ProductsAction from '../../../action/getProductsAction/getProductsAction';
 import * as CategoriesAction from '../../../action/getCategoriesAction/getCategoriesAction';
@@ -42,7 +43,9 @@ class DashboardRight extends Component {
               </Card.Meta>
               <Card.Description>
                 <h3>{allProducts.length}</h3>
-                <Button>View All</Button>
+                <Link to="/products">
+                  <Button>View All</Button>
+                </Link>
               </Card.Description>
             </Card.Content>
           )}
@@ -59,7 +62,9 @@ class DashboardRight extends Component {
               </Card.Meta>
               <Card.Description>
                 <h3>{allCategories.length}</h3>
-                <Button>View All</Button>
+                <Link to="/categories">
+                  <Button>View All</Button>
+                </Link>
               </Card.Description>
             </Card.Content>
           )}
@@ -75,7 +80,9 @@ class DashboardRight extends Component {
               </Card.Meta>
               <Card.Description>
                 <h3>{allSales.length}</h3>
-                <Button>View All</Button>
+                <Link to="/sales">
+                  <Button>View All</Button>
+                </Link>
               </Card.Description>
             </Card.Content>
           )}
@@ -93,7 +100,9 @@ class DashboardRight extends Component {
                   </Card.Meta>
                   <Card.Description>
                     <h3>{allUsers.length}</h3>
-                    <Button>View All</Button>
+                    <Link to="/cusers">
+                      <Button>View All</Button>
+                    </Link>
                   </Card.Description>
                 </Card.Content>
               )}

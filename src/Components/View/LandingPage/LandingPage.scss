@@ -33,6 +33,11 @@ body {
   background: linear-gradient(rgba(161, 161, 161, 0.7), rgba(161, 161, 161, 0.7));
 }
 
+.ui.center.aligned.header,
+.ui.centered.header {
+  text-align: center;
+  background-color: transparent;
+}
 @media all and (max-width: 768px) {
   #landingPageContent {
     margin-top: 4em;
