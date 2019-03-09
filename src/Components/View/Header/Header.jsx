@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Menu, Segment } from 'semantic-ui-react';
 
-const Header = ({ children }) => {
+const PageHeader = ({ children }) => {
   return (
     <Segment inverted>
       <Menu inverted pointing secondary stackable>
@@ -22,12 +22,12 @@ const Header = ({ children }) => {
   );
 };
 
-Header.propTypes = {
+PageHeader.propTypes = {
   children: PropTypes.node
 };
 
-Header.defaultProps = {
+PageHeader.defaultProps = {
   children: null
 };
 
-export default Header;
+export default PageHeader;

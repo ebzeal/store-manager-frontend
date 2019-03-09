@@ -4,7 +4,9 @@ import { Menu, Image } from 'semantic-ui-react';
 import UserIcon from '../UserProfileDropdown/UserProfileDropdown';
 
 class AdminHeader extends Component {
-  state = { activeItem: 'dashboard' };
+  state = { activeItem: '' };
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
     const { activeItem } = this.state;
@@ -13,7 +15,7 @@ class AdminHeader extends Component {
         <Link to="/dashboard" className="menuItems">
           <Menu.Item name="dashboard" active={activeItem === 'dashboard'} onClick={this.handleItemClick} />
         </Link>
-        <Link to="/adminProducts" className="menuItems">
+        <Link to="/products" className="menuItems">
           <Menu.Item name="products" active={activeItem === 'products'} onClick={this.handleItemClick} />
         </Link>
         <Link to="/adminSales" className="menuItems wide">

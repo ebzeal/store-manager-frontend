@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
-import Header from '../../View/Header/Header';
+import PageHeader from '../../View/Header/Header';
 import DashboardRight from '../../View/DashboardRight/DashboardRight';
 import AdminHeader from '../../View/Header/AdminHeader/AdminHeader';
 import AdminHeaderReasponsive from '../../View/Header/AdminHeaderResponsive/AdminHeaderResponsive';
@@ -8,10 +8,10 @@ import AdminHeaderReasponsive from '../../View/Header/AdminHeaderResponsive/Admi
 const Dashboard = () => {
   return (
     <div>
-      <Header>
+      <PageHeader>
         <AdminHeader />
         <AdminHeaderReasponsive />
-      </Header>
+      </PageHeader>
       <div className="ui" id="allPage">
         <section className="ui grid stackable container" id="dashboardSection">
           <Grid stackable textAlign="center">

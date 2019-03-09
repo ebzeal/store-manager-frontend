@@ -58,5 +58,29 @@ input {
   margin: 0px auto;
 }
 
+#allPage {
+  background-color: #fff;
+  height: 100vh;
+}
+
+.title {
+  margin: 1.5em auto;
+  margin-top: 1.5em !important;
+}
+
+.alertText {
+  color: red;
+}
+
+#ClickableCell {
+  cursor: pointer;
+}
+#ClickableCell:hover {
+  background-color: rgb(227, 228, 231);
+}
+
+#ModalPad {
+  padding: 2em;
+}
 @media only screen and (max-width: 768px) {
 }

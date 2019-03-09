@@ -4,12 +4,14 @@ import Route from 'react-router-dom/Route';
 import HomepageLayout from '../Components/View/LandingPage/LandingPage';
 import AuthRoute from '../Components/Container/ProtectedRoute/ProtectedRoute';
 import Dashboard from '../Components/Container/Dashboard/Dashboard';
+import ProductsPage from '../Components/Container/Products/AllProducts/Products';
 
 const Routes = () => (
   <Router>
     <Switch>
       <Route path="/" component={HomepageLayout} exact />
       <AuthRoute path="/dashboard" component={Dashboard} exact />
+      <AuthRoute path="/products" component={ProductsPage} exact />
     </Switch>
   </Router>
 );
