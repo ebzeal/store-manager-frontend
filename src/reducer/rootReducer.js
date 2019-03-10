@@ -4,13 +4,15 @@ import getProductsReducer from './getProductsReducer/getProductsReducer';
 import getCategoriesReducer from './getCategoriesReducer/getCategoriesReducer';
 import getUsersReducer from './getUsersReducer/getUsersReducer';
 import getSalesReducer from './getSalesReducer/getSalesReducer';
+import createProductReducer from './createProductReducer/createProductReducer';
 
 const reducers = combineReducers({
   auth: loginReducer,
   products: getProductsReducer,
   categories: getCategoriesReducer,
   users: getUsersReducer,
-  sales: getSalesReducer
+  sales: getSalesReducer,
+  addProduct: createProductReducer
 });
 
 const rootReducer = (state, action) => {

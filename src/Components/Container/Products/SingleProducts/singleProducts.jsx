@@ -104,8 +104,11 @@ class SingleProduct extends Component {
 SingleProduct.propTypes = {
   triggerEl: PropTypes.oneOfType([PropTypes.node]),
   productId: PropTypes.number.isRequired,
-  theProduct: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  size: PropTypes.string.isRequired
+  theProduct: PropTypes.oneOfType([PropTypes.array]).isRequired,
+  size: PropTypes.string
+};
+SingleProduct.defaultProps = {
+  size: ''
 };
 
 SingleProduct.defaultProps = {
