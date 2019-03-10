@@ -25,6 +25,6 @@ export const getProductsAction = () => async dispatch => {
     const response = await makeRequest('/products');
     dispatch(getProductsSuccess(response));
   } catch (errors) {
-    dispatch(getProductsfailure(errors.response));
+    dispatch(getProductsfailure(errors.response.data));
   }
 };

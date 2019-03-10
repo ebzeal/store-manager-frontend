@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Button, Icon, Modal, Card, Grid, Image, Form, Input } from 'semantic-ui-react';
+import { Button, Icon, Modal } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import ProductForm from '../../../View/Products/ProductForm/ProductForm';
 import ViewProduct from '../../../View/Products/ViewProduct/ViewProduct';
+import * as deleteProductAction from '../../../../action/deleteProductAction/deleteProductAction';
 
 class SingleProduct extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      editing: false
+      editing: false,
+      modalOpen: false
     };
   }
 
@@ -29,6 +32,19 @@ class SingleProduct extends Component {
   toggleEdit = () => {
     const { editing } = this.state;
     this.setState({ editing: !editing });
+  };
+
+  closeModal = () => {
+    this.setState({ modalOpen: false });
+  };
+
+  deleteThisProduct = () => {
+    if (confirm('Are you sure you want to delete this product?')) {
+      const { productId, history, deleteProduct } = this.props;
+
+      deleteProduct(productId, history);
+      // this.closeModal();
+    }
   };
 
   render() {
@@ -85,7 +101,7 @@ class SingleProduct extends Component {
         </Modal.Content>
         {userPriviledge === 'Admin' ? (
           <Modal.Actions>
-            <Button color="red">
+            <Button color="red" onClick={this.deleteThisProduct}>
               <Icon name="remove" />
               Delete
             </Button>
@@ -104,8 +120,11 @@ class SingleProduct extends Component {
 SingleProduct.propTypes = {
   triggerEl: PropTypes.oneOfType([PropTypes.node]),
   productId: PropTypes.number.isRequired,
-  theProduct: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  size: PropTypes.string.isRequired
+  theProduct: PropTypes.oneOfType([PropTypes.array]).isRequired,
+  size: PropTypes.string
+};
+SingleProduct.defaultProps = {
+  size: ''
 };
 
 SingleProduct.defaultProps = {
@@ -117,4 +136,13 @@ const mapStateToProps = state => ({
   theCategory: state.categories.categories.rows
 });
 
-export default connect(mapStateToProps)(SingleProduct);
+const mapDispatchToProps = {
+  deleteProduct: deleteProductAction.deleteProductAction
+};
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(SingleProduct)
+);

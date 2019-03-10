@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   products: [],
-  productsErrors: [],
+  productsErrors: {},
   isLoading: false
 };
 
