@@ -5,6 +5,9 @@ import getCategoriesReducer from './getCategoriesReducer/getCategoriesReducer';
 import getUsersReducer from './getUsersReducer/getUsersReducer';
 import getSalesReducer from './getSalesReducer/getSalesReducer';
 import createProductReducer from './createProductReducer/createProductReducer';
+import createCategoryReducer from './createCategoryReducer/createCategoryReducer';
+import editProductReducer from './editProductReducer/editProductReducer';
+import deleteProductReducer from './deleteProductReducer/deleteProductReducer';
 
 const reducers = combineReducers({
   auth: loginReducer,
@@ -12,7 +15,10 @@ const reducers = combineReducers({
   categories: getCategoriesReducer,
   users: getUsersReducer,
   sales: getSalesReducer,
-  addProduct: createProductReducer
+  addProduct: createProductReducer,
+  addCategory: createCategoryReducer,
+  editProduct: editProductReducer,
+  deleteProduct: deleteProductReducer
 });
 
 const rootReducer = (state, action) => {

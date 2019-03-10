@@ -10,7 +10,7 @@ import * as CategoriesAction from '../../../../action/getCategoriesAction/getCat
 import SingleProduct from '../SingleProducts/singleProducts';
 import Loading from '../../../View/Loading/Loading';
 import CreateProduct from '../CreateProducts/CreateProducts';
-
+import CreateCategory from '../../Categories/CreateCategory/CreateCategory';
 
 class ProductsPage extends Component {
   componentDidMount() {
@@ -53,6 +53,14 @@ class ProductsPage extends Component {
                                 )
                             } 
                             />
+
+                            <CreateCategory
+                                    triggerEl={
+                                      (
+                                        <Button className="searchBtn">Add New Category</Button>
+                                      )
+                                  } 
+                                  />
                       <Form>
     <Form.Field>
       <label>Search</label>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import { Form, Grid, Input, Button, Dropdown, Message } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-import * as createProductAction from '../../../../action/createProductAction/createProductAction';
+import * as createAction from '../../../../action/createProductAction/createProductAction';
 
 class AddProductForm extends Component {
   constructor(props) {
@@ -74,37 +74,34 @@ class AddProductForm extends Component {
       <>
         <h2>Create New Product</h2>
         <br />
-        
+
         <Form id="signup-form" onSubmit={this.handleSubmit}>
           {(() => {
             return productErrors && productErrors.length ? (
               <Message negative list={Object.values(productErrors[0])} />
             ) : null;
           })()}
-              <Form.Field>
-                <input type="text" id="fullName" placeholder="Name" onChange={this.handleFieldChange} />
-              </Form.Field>
-              <Form.Field>
-                <input type="text" id="userName" placeholder="Username" onChange={this.handleFieldChange} />
-              </Form.Field>
-              <Form.Field>
-                <input type="email" id="email" placeholder="Email" onChange={this.handleFieldChange} />
-              </Form.Field>
-              <Form.Field>
-                <input type="password" id="password" placeholder="Password" onChange={this.handleFieldChange} />
-              </Form.Field>
-              <Form.Field>
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  placeholder="Confirm Password"
-                  onChange={this.handleFieldChange}
-                />
-              </Form.Field>
-              <Button loading={isLoading} disabled={hasValidationError} primary fluid content="Sign Up" />
-            </Form>
-
-      
+          <Form.Field>
+            <input type="text" id="fullName" placeholder="Name" onChange={this.handleFieldChange} />
+          </Form.Field>
+          <Form.Field>
+            <input type="text" id="userName" placeholder="Username" onChange={this.handleFieldChange} />
+          </Form.Field>
+          <Form.Field>
+            <input type="email" id="email" placeholder="Email" onChange={this.handleFieldChange} />
+          </Form.Field>
+          <Form.Field>
+            <input type="password" id="password" placeholder="Password" onChange={this.handleFieldChange} />
+          </Form.Field>
+          <Form.Field>
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+              onChange={this.handleFieldChange}
+            />
+          </Form.Field>
+          <Button loading={isLoading} primary fluid content="Sign Up" />
         </Form>
       </>
     );
@@ -117,7 +114,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  createProduct: createProductAction.createProductAction
+  createProduct: createAction.createProductAction
 };
 
 export default connect(

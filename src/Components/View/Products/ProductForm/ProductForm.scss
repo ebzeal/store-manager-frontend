@@ -6,3 +6,43 @@
   margin-left: 5em;
   margin-top: 1em;
 }
+
+#img-upload {
+  margin-left: -1.5em;
+  width: 60%;
+}
+
+.ui.form .field .ui.input input,
+.ui.form .fields .field .ui.input input {
+  margin: -20px 0 !important;
+  width: 60%;
+}
+
+.ui.form .inline.field > :only-child,
+.ui.form .inline.fields .field > :only-child {
+  height: 2.5em;
+}
+
+.ui.form select {
+  height: 2.5em;
+  margin-top: -15px;
+  margin-left: 0.09em;
+  margin-right: 100px;
+  width: 60%;
+}
+
+.ui.form input:not([type]),
+.ui.form input[type='date'],
+.ui.form input[type='datetime-local'],
+.ui.form input[type='email'],
+.ui.form input[type='file'],
+.ui.form input[type='number'],
+.ui.form input[type='password'],
+.ui.form input[type='search'],
+.ui.form input[type='tel'],
+.ui.form input[type='text'],
+.ui.form input[type='time'],
+.ui.form input[type='url'] {
+  margin: -20px 0 !important;
+  width: 85%;
+}

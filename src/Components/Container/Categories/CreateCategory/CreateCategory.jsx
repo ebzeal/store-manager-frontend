@@ -2,26 +2,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Modal } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-// import AddProductForm from '../../../View/Products/ProductForm/AddProductForm';
-import ProductForm from '../../../View/Products/ProductForm/ProductForm';
+import AddCategoryForm from '../../../View/Categories/CategoriesForm/AddCategoryForm';
 
-class CreateProduct extends Component {
+class CreateCategory extends Component {
   render() {
     const { triggerEl, userPriviledge, formType = 'Add' } = this.props;
     return (
       <Modal trigger={triggerEl} closeIcon id="ModalPad">
         <Modal.Content>
-          <ProductForm />
+          <AddCategoryForm />
         </Modal.Content>
       </Modal>
     );
   }
 }
-CreateProduct.propTypes = {
+CreateCategory.propTypes = {
   triggerEl: PropTypes.oneOfType([PropTypes.node])
 };
 
-CreateProduct.defaultProps = {
+CreateCategory.defaultProps = {
   triggerEl: null
 };
 
@@ -30,4 +29,4 @@ const mapStateToProps = state => ({
   theCategory: state.categories.categories.rows
 });
 
-export default connect(mapStateToProps)(CreateProduct);
+export default connect(mapStateToProps)(CreateCategory);

@@ -21,34 +21,37 @@ export const createProductfailure = errors => ({
   payload: { isLoading: false, productErrors: [{ ...errors }], product: [] }
 });
 
-export const createProductAction = inputFieldsData => async dispatch => {
+export const createProductAction = ({
+  categories_id,
+  productName,
+  productImage,
+  productDetails,
+  productSpec,
+  productPrice,
+  productQuantity,
+  productLimit,
+  history
+}) => async dispatch => {
   dispatch(createProductBegin());
   try {
-    // const formData = new FormData();
-    // formData.append('file', file);
-    // formData.append('upload_preset', 'j6ig61vg');
-    // const imageResponse = await Axios({
-    //   method: 'post',
-    //   url: 'https://api.cloudinary.com/v1_1/ebzeal/image/upload',
-    //   data: formData,
-    //   config: { headers: { 'Content-Type': 'multipart/form-data', 'X-Requested-With': 'XMLHttpRequest' } }
-    // });
-    // const upload = await Axios({
-    //   method: 'post',
-    //   url: 'https://api.cloudinary.com/v1_1/jesseinit/image/upload',
-    //   data: formData,
-    //   config: { headers: { 'Content-Type': 'multipart/form-data' } }
-    // });
-    // console.log('TCL: imageResponse', imageResponse);
     const response = await makeRequest('/products', {
       method: 'POST',
-      body: inputFieldsData,
+      body: {
+        categories_id,
+        productName,
+        productImage,
+        productDetails,
+        productSpec,
+        productPrice,
+        productQuantity,
+        productLimit
+      },
       headers: { 'Access-Control-Allow-Origin': '*' }
     });
     dispatch(createProductSuccess(response));
-    console.log('TCL: response', response);
+    history.push('/');
+    history.push('/products');
   } catch (errors) {
     dispatch(createProductfailure(errors.response.data));
-    console.log('TCL: }catch -> errors.response.data', errors);
   }
 };
