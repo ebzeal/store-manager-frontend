@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Header, Table, Card, Button, Image, Grid, Form, Checkbox } from 'semantic-ui-react';
+import { Header, Table, Card, Button, Image, Grid, Form, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import PageHeader from '../../../View/Header/Header';
@@ -11,6 +12,7 @@ import SingleProduct from '../SingleProducts/singleProducts';
 import Loading from '../../../View/Loading/Loading';
 import CreateProduct from '../CreateProducts/CreateProducts';
 import CreateCategory from '../../Categories/CreateCategory/CreateCategory';
+import * as cartActions from '../../../../action/cartAction/cartAction';
 
 class ProductsPage extends Component {
   componentDidMount() {
@@ -25,6 +27,18 @@ class ProductsPage extends Component {
     });
 
     return theCatg[0] && theCatg[0].categoryname;
+  };
+
+  addToCart = () => {
+    const { productId, category, image, price, spec, name, addToStoreCart } = this.props;
+
+    // const productId = product.id
+    // const productDetail = product.productdetails
+    // const productImage = product.productImage
+    // const productName = product.productname
+    // const price = product.productprice
+
+    addToStoreCart();
   };
 
   render() {
@@ -140,7 +154,7 @@ class ProductsPage extends Component {
                           <Table.Cell textAlign="right">{product.productlimit}</Table.Cell>
                           <Table.Cell textAlign="right">{product.productprice}</Table.Cell>
                           <Table.Cell>
-                            <Button mini>Add to cart</Button>
+                            <Icon name="cart" primary className="addCartIcon" onClick={this.addToCart}>+</Icon>
                           </Table.Cell>
                         </Table.Row>
                       );
@@ -182,7 +196,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   getProducts: ProductsAction.getProductsAction,
-  getCategories: CategoriesAction.getCategoriesAction
+  getCategories: CategoriesAction.getCategoriesAction,
+  addToStoreCart: cartActions.addToCart
 };
 
 export default connect(

@@ -100,7 +100,7 @@ class DashboardRight extends Component {
                   </Card.Meta>
                   <Card.Description>
                     <h3>{allUsers.length}</h3>
-                    <Link to="/cusers">
+                    <Link to="/users">
                       <Button>View All</Button>
                     </Link>
                   </Card.Description>

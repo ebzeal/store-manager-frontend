@@ -10,6 +10,7 @@ const AdminHeaderResponsive = props => {
           <Dropdown.Item text={<Link to="/dashboard">Dashboard</Link>} />
           <Dropdown.Item text={<Link to="/products">Products</Link>} />
           <Dropdown.Item text={<Link to="/sales">View Sales</Link>} />
+          <Dropdown.Item text={<Link to="/cart">Cart</Link>} />
           <Dropdown.Item text={<Link to="/users">Users</Link>} />
           <Dropdown.Item text={<Link to="/incidence">Incidence</Link>} />
           <Dropdown.Item text={<Link to="/profile">My Profile</Link>} />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, Image } from 'semantic-ui-react';
+import { Menu, Image, Icon, Label } from 'semantic-ui-react';
 import UserIcon from '../UserProfileDropdown/UserProfileDropdown';
 
 class AdminHeader extends Component {
@@ -18,19 +18,26 @@ class AdminHeader extends Component {
         <Link to="/products" className="menuItems">
           <Menu.Item name="products" active={activeItem === 'products'} onClick={this.handleItemClick} />
         </Link>
-        <Link to="/adminSales" className="menuItems wide">
+        {/* <Link to="/adminSales" className="menuItems wide">
           <Menu.Item name="View Sales" active={activeItem === 'View Sales'} onClick={this.handleItemClick} />
-        </Link>
+        </Link> */}
         <Link to="/users" className="menuItems">
           <Menu.Item name="Users" active={activeItem === 'Users'} onClick={this.handleItemClick} />
         </Link>
-        <Link to="/Incidence" className="menuItems">
+        {/* <Link to="/Incidence" className="menuItems">
           <Menu.Item name="incidence" active={activeItem === 'incidence'} onClick={this.handleItemClick} />
+        </Link>
+        <Link to="/cart" className="menuItems">
+          <Menu.Item id="cartIcon">
+            <Icon name="cart" />
+            {/* <Label color="red" floating /> 
+          </Menu.Item>
         </Link>
         <Menu.Item id="userProfile" className="menuItems">
           <Image circular src="https://react.semantic-ui.com/images/avatar/large/patrick.png" size="mini" />
+
           <UserIcon />
-        </Menu.Item>
+        </Menu.Item> */}
       </div>
     );
   }
