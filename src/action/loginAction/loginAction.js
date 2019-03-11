@@ -38,7 +38,7 @@ export const loginAction = ({ userEmail, password, history }) => async dispatch 
     });
     localStorage.setItem('userToken', response.token);
     dispatch(loginSuccess(response));
-    history.push('/dashboard');
+    window.location.href = '/dashboard';
   } catch (errors) {
     dispatch(loginfailure(errors.response));
   }
