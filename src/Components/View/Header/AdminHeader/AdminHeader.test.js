@@ -14,6 +14,6 @@ describe('<AdminHeader />', () => {
   });
 
   it('should have three Navigation Links', () => {
-    expect(wrapper.find('Link').length).toEqual(5);
+    expect(wrapper.find('Link').length).toEqual(3);
   });
 });

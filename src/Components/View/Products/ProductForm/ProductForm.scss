@@ -46,3 +46,10 @@
   margin: -20px 0 !important;
   width: 85%;
 }
+
+@media only screen and (max-width: 768px) {
+  .ui.card:first-child {
+    margin-top: 0;
+    width: 100%;
+  }
+}

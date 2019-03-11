@@ -7,8 +7,21 @@
   //   margin: 0px;
   // }
 
+  .ui.stackable.cards .card:first-child {
+    margin-top: 0 !important;
+    width: 92% !important;
+    margin: 0px auto;
+  }
+
+  .ui.stackable.cards > .card {
+    display: block !important;
+    height: auto !important;
+    margin: 1em 1em;
+    padding: 0 !important;
+    width: auto !important;
+  }
   .ui.cards {
-    width: 150%;
+    width: 80%;
     margin: 0 0 0 10%;
     align-content: center;
   }

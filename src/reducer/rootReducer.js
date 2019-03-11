@@ -8,6 +8,7 @@ import createProductReducer from './createProductReducer/createProductReducer';
 import createCategoryReducer from './createCategoryReducer/createCategoryReducer';
 import editProductReducer from './editProductReducer/editProductReducer';
 import deleteProductReducer from './deleteProductReducer/deleteProductReducer';
+import cartReducer from './cartReducer/cartReducer';
 
 const reducers = combineReducers({
   auth: loginReducer,
@@ -18,7 +19,8 @@ const reducers = combineReducers({
   addProduct: createProductReducer,
   addCategory: createCategoryReducer,
   editProduct: editProductReducer,
-  deleteProduct: deleteProductReducer
+  deleteProduct: deleteProductReducer,
+  cart: cartReducer
 });
 
 const rootReducer = (state, action) => {

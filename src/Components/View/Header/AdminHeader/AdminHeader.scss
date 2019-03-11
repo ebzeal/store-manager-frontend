@@ -1,6 +1,7 @@
 .landingPage__mobile {
   display: flex;
-  margin-left: 10em;
+  // margin-left: 10em;
+  margin-left: 20em;
   justify-content: center;
 }
 
@@ -13,20 +14,32 @@
 //   margin-right: 0;
 // }
 #userProfile {
-  margin-left: 30em;
+  margin-left: 3em;
 }
-// .ui.secondary.inverted.pointing.menu .item {
-//   vertical-align: baseline;
-// }
+
+#cartIcon {
+  margin-left: 20em;
+}
 .menuItems {
   margin-top: 1em;
 }
 .wide {
   width: 14em;
 }
+
+i.icon.cart:before {
+  margin-left: -1em;
+  margin-top: 0em;
+}
+.ui.menu .item > .floating.label {
+  margin-left: -5em;
+}
 @media only screen and (max-width: 1168px) {
-  #userProfile {
+  #cartIcon {
     margin-left: 10em;
+  }
+  #userProfile {
+    margin-left: 2em;
   }
 
   .wide {

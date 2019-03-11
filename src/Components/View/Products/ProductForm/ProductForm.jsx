@@ -115,7 +115,7 @@ class ProductForm extends Component {
             return productErrors && productErrors.length ? (
               <Message negative list={Object.values(productErrors[0])} />
             ) : null;
-          })()} 
+          })()}
           {(() => {
             return editProductErrors && editProductErrors.length ? (
               <Message negative list={Object.values(editProductErrors[0])} />
